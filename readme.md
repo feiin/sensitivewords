@@ -15,8 +15,14 @@ import (
 )
 
 func main() {
-	sensitive := sensitivewords.New()
-	sensitive.LoadFromFile("./keywords.txt") //尼玛,哈哈
+    sensitive := sensitivewords.New()
+    /*
+     * keywords.txt:
+     * 尼玛
+     * 哈哈
+     */
+    sensitive.LoadFromFile("./keywords.txt") 
+    
 	sensitive.Add("测试")
 	sensitive.AddWords("+q", "+v")
 
