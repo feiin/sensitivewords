@@ -23,7 +23,7 @@ func main() {
      */
     sensitive.LoadFromFile("./keywords.txt") 
     
-	sensitive.Add("测试")
+	sensitive.AddWord("测试")
 	sensitive.AddWords("+q", "+v")
 
 	s, keyword := sensitive.Find("测试啊+q/+v,尼玛,哈哈")

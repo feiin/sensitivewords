@@ -21,7 +21,7 @@ func TestSensitiveWordsCheck(t *testing.T) {
 	isSensitive := sensitive.Check("卧槽啊啊啊啊")
 
 	if isSensitive == true {
-		t.Errorf("check success")
+		t.Logf("check success")
 	} else {
 		t.Errorf("check failed")
 	}
@@ -29,7 +29,7 @@ func TestSensitiveWordsCheck(t *testing.T) {
 	isSensitive = sensitive.Check("111啊啊啊啊")
 
 	if isSensitive == false {
-		t.Errorf("check success")
+		t.Logf("check success")
 	} else {
 		t.Errorf("check failed")
 	}
@@ -42,7 +42,7 @@ func TestSensitiveWordsFindAny(t *testing.T) {
 	isSensitive, results := sensitive.FindAny("卧槽啊啊啊尼玛", 2)
 
 	if isSensitive == true {
-		t.Errorf("FindAny success %v", results)
+		t.Logf("FindAny success %v", results)
 	} else {
 		t.Errorf("FindAny failed")
 	}
@@ -56,7 +56,7 @@ func TestSensitiveWordsFind(t *testing.T) {
 	isSensitive, keyword := sensitive.Find("卧卧槽啊啊啊尼玛")
 
 	if isSensitive == true && keyword == "卧槽" {
-		t.Errorf("Find success %v", keyword)
+		t.Logf("Find success %v", keyword)
 	} else {
 		t.Errorf("Find failed")
 	}
@@ -70,7 +70,7 @@ func TestSensitiveWordsFindAll(t *testing.T) {
 	isSensitive, results := sensitive.FindAll("卧卧槽啊啊啊尼玛测测试测试")
 
 	if isSensitive == true && len(results) == 4 {
-		t.Errorf("FindAll success %v", results)
+		t.Logf("FindAll success %v", results)
 	} else {
 		t.Errorf("FindAll failed")
 	}

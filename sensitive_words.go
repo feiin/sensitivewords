@@ -49,8 +49,8 @@ func (sensitiveWords *SensitiveWords) LoadFromFile(path string) error {
 
 }
 
-//Add  添加敏感词
-func (sensitiveWords *SensitiveWords) Add(word string) {
+//AddWord  添加敏感词
+func (sensitiveWords *SensitiveWords) AddWord(word string) {
 	sensitiveWords.trie.Add(word)
 }
 
