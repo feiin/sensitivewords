@@ -1,6 +1,6 @@
 # SensitiveWords 
 
-golang实现[DFA算法](https://zh.wikipedia.org/wiki/确定有限状态自动机)实现敏感词过滤匹配
+golang实现[DFA算法](https://zh.wikipedia.org/wiki/确定有限状态自动机)的敏感词查找、过滤替换、敏感词匹配检测
 
 ## 用法
 
