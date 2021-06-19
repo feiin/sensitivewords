@@ -67,9 +67,9 @@ func TestSensitiveWordsFindAll(t *testing.T) {
 	sensitive := New()
 	sensitive.LoadFromFile("./tests/keywords.txt")
 
-	isSensitive, results := sensitive.FindAll("卧卧槽啊啊啊尼玛测测试测试")
+	isSensitive, results := sensitive.FindAll("titestosterone")
 
-	if isSensitive == true && len(results) == 4 {
+	if isSensitive == true {
 		t.Logf("FindAll success %v", results)
 	} else {
 		t.Errorf("FindAll failed")
